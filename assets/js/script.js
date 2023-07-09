@@ -1,4 +1,4 @@
-var weatherApiRootUrl = 'https://api.openweathermap.org';
+var weatherApiUrl = 'https://api.openweathermap.org';
 var weatherApiKey = '2d2f037a0ed3c66529ee3209541a7cda';
 
 var searchForm = document.querySelector('#search-form');
@@ -18,7 +18,7 @@ function renderSearchHistory() {
   for (var i = searchHistory.length - 1; i >= 0; i--) {
     var btn = document.createElement('button');
     btn.setAttribute('type', 'button');
-    btn.setAttribute('today forecast');
+    btn.setAttribute('today', 'forecast');
     btn.classList.add('history-btn', 'btn-history');
 
     btn.setAttribute('data-search', searchHistory[i]);
@@ -157,14 +157,12 @@ function renderItems(city, data) {
   renderForecast(data.list);
 }
 
-// Fetches weather data for given location from the Weather Geolocation
-// endpoint; then, calls functions to display current and forecast weather data.
 function fetchWeather(location) {
   var { lat } = location;
   var { lon } = location;
   var city = location.name;
 
-  var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
+  var apiUrl = `${weatherApiUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
 
   fetch(apiUrl)
     .then(function (res) {
@@ -179,7 +177,7 @@ function fetchWeather(location) {
 }
 
 function fetchCoords(search) {
-  var apiUrl = `${weatherApiRootUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
+  var apiUrl = `${weatherApiUrl}/geo/1.0/direct?q=${search}&limit=5&appid=${weatherApiKey}`;
 
   fetch(apiUrl)
     .then(function (res) {
