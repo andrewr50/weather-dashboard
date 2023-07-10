@@ -11,3 +11,4 @@ Simply open the [webpage] (https://andrewr50.github.io/weather-dashboard/) and t
 ## Credits
 
 [DayJS Documentation] (https://day.js.org/docs/en/installation/installation)
+[OpenWeather Documentation] (https://openweathermap.org/forecast5)
