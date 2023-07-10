@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Weather Dashboard</title>
   </head>
 
   <body>
     <header
-      class="container-fluid text-center text-white bg-dark p-2 weather-header"
+      class="container-fluid text-center p-2 weather-header"
     >
       <h1>Weather Dashboard</h1>
     </header>
@@ -18,22 +18,20 @@
     <div class="container-fluid">
       <div class="row">
         <aside class="col-lg-3 pb-3">
-          <h2 id="form-heading" class="mt-1 h3 form-label">
+          <h2 class="mt-1 h3">
             Search for a City:
           </h2>
           <form id="search-form" class="form">
             <div class="form-inline form-group">
-              <div class="input-group">
+              <div>
                 <input
-                  class="form-input weather-search"
                   type="text"
                   id="search-input"
-                  placeholder="Houston"
+                  placeholder="San Diego"
                 />
-                <div class="input-group-append">
+                <div>
                   <button
                     type="submit"
-                    class="btn search-button"
                     id="search-button"
                   >
                     Search
@@ -60,7 +58,8 @@
         </div>
       </div>
     </div>
-    <!-- dayjs for date formatting -->
+
+    <!-- use day.js to easily format dates -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.4/dayjs.min.js"
       integrity="sha512-0fcCRl828lBlrSCa8QJY51mtNqTcHxabaXVLPgw/jPA5Nutujh6CbTdDgRzl9aSPYW/uuE7c4SffFUQFBAy6lg=="
